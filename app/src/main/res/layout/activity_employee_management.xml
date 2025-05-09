@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Employee Management"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:paddingBottom="16dp" />
+
+        <!-- Employee Table -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:background="#FFFFFF"
+            android:elevation="1dp"
+            android:padding="8dp">
+
+            <TableRow>
+                <TextView android:text="ID" android:textStyle="bold" android:padding="8dp" />
+                <TextView android:text="Name" android:textStyle="bold" android:padding="8dp" />
+            </TableRow>
+
+            <!-- Repeating employee rows to make screen scrollable -->
+            <TableRow><TextView android:text="001" android:padding="8dp" /><TextView android:text="Alice" android:padding="8dp" /></TableRow>
+            <TableRow><TextView android:text="002" android:padding="8dp" /><TextView android:text="Bob" android:padding="8dp" /></TableRow>
+            <TableRow><TextView android:text="003" android:padding="8dp" /><TextView android:text="Charlie" android:padding="8dp" /></TableRow>
+            <TableRow><TextView android:text="004" android:padding="8dp" /><TextView android:text="Daisy" android:padding="8dp" /></TableRow>
+            <TableRow><TextView android:text="005" android:padding="8dp" /><TextView android:text="Ethan" android:padding="8dp" /></TableRow>
+            <TableRow><TextView android:text="006" android:padding="8dp" /><TextView android:text="Fiona" android:padding="8dp" /></TableRow>
+            <TableRow><TextView android:text="007" android:padding="8dp" /><TextView android:text="George" android:padding="8dp" /></TableRow>
+            <TableRow><TextView android:text="008" android:padding="8dp" /><TextView android:text="Hannah" android:padding="8dp" /></TableRow>
+            <TableRow><TextView android:text="009" android:padding="8dp" /><TextView android:text="Ian" android:padding="8dp" /></TableRow>
+            <TableRow><TextView android:text="010" android:padding="8dp" /><TextView android:text="Jenny" android:padding="8dp" /></TableRow>
+            <TableRow><TextView android:text="011" android:padding="8dp" /><TextView android:text="Ken" android:padding="8dp" /></TableRow>
+            <TableRow><TextView android:text="012" android:padding="8dp" /><TextView android:text="Linda" android:padding="8dp" /></TableRow>
+            <TableRow><TextView android:text="013" android:padding="8dp" /><TextView android:text="Mike" android:padding="8dp" /></TableRow>
+            <TableRow><TextView android:text="014" android:padding="8dp" /><TextView android:text="Nina" android:padding="8dp" /></TableRow>
+            <TableRow><TextView android:text="015" android:padding="8dp" /><TextView android:text="Oscar" android:padding="8dp" /></TableRow>
+            <TableRow><TextView android:text="016" android:padding="8dp" /><TextView android:text="Paula" android:padding="8dp" /></TableRow>
+            <TableRow><TextView android:text="017" android:padding="8dp" /><TextView android:text="Quinn" android:padding="8dp" /></TableRow>
+            <TableRow><TextView android:text="018" android:padding="8dp" /><TextView android:text="Rachel" android:padding="8dp" /></TableRow>
+            <TableRow><TextView android:text="019" android:padding="8dp" /><TextView android:text="Steve" android:padding="8dp" /></TableRow>
+            <TableRow><TextView android:text="020" android:padding="8dp" /><TextView android:text="Tina" android:padding="8dp" /></TableRow>
+
+        </TableLayout>
+
+        <!-- Add Employee Button -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="➕ Add Employee"
+            android:textAllCaps="false"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#FF9800"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+</ScrollView>
