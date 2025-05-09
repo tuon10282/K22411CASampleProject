@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Bậc Nhất</string>
+    <string name="title_app">Phương trình Bậc Nhất</string>
+    <string name="title_a">Hệ số a: </string>
+    <string name="title_b">Hệ số b:</string>
+    <string name="title_solution">Giải phương trình</string>
+    <string name="title_next">Tiếp tục</string>
+    <string name="title_exit">Thoát</string>
+    <string name="title_result">Kết quả: </string>
+    <string name="title_infinity">Vô số nghiệm!</string>
+    <string name="title_nosulution">Vô nghiệm!</string>
+</resources>

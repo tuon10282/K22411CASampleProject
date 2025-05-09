@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Primer Grado</string>
+    <string name="title_app">Ecuación de Primer Grado</string>
+    <string name="title_a">Coeficiente a: </string>
+    <string name="title_b">Coeficiente b:</string>
+    <string name="title_solution">Solución</string>
+    <string name="title_next">Siguiente</string>
+    <string name="title_exit">Salir</string>
+    <string name="title_result">Resultado: </string>
+    <string name="title_infinity">¡Infinito!</string>
+    <string name="title_nosulution">¡Sin solución!</string>
+</resources>
