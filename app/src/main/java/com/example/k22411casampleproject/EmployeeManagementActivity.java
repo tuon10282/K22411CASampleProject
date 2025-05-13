@@ -1,6 +1,8 @@
 package com.example.k22411casampleproject;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,4 +23,8 @@ public class EmployeeManagementActivity extends AppCompatActivity {
         });
     }
 
+    public void do_open_employee_healthcare(View view) {
+        Intent intent = new Intent(EmployeeManagementActivity.this, EmployeeHealthcareActivity.class);
+        startActivity(intent);
+    }
 }

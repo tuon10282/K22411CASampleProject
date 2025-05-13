@@ -3,19 +3,11 @@ plugins {
 }
 
 android {
-<<<<<<< HEAD
     namespace = "com.example.k22411casampleproject"
     compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.k22411casampleproject"
-=======
-    namespace = "com.example.k22411caproject2"
-    compileSdk = 35
-
-    defaultConfig {
-        applicationId = "com.example.k22411caproject2"
->>>>>>> 297ea59a764d2d444ef8639419c454ecb9d8efea
         minSdk = 26
         targetSdk = 35
         versionCode = 1
@@ -40,7 +32,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)

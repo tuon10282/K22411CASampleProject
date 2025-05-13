@@ -30,37 +30,25 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
-    private void addEvents() {
-        imgEmployee.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //gọi code mở màn hình quản trị nhân sự
-                openEmployeeManagementActivity();
 
-            }
-        });
-        imgEmployee.setOnClickListener(v -> {
+    private void addEvents() {
+        // Only one listener needed for imgEmployee and txtEmployee
+        View.OnClickListener employeeClickListener = v -> {
             Toast.makeText(MainActivity.this, "Đã bấm ảnh", Toast.LENGTH_SHORT).show();
             openEmployeeManagementActivity();
-        });
-        txtEmployee.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //gọi code mở màn hình quản trị nhân sự
-                openEmployeeManagementActivity();
-            }
-        });
+        };
+
+        imgEmployee.setOnClickListener(employeeClickListener);
+        txtEmployee.setOnClickListener(employeeClickListener);
     }
 
     private void addViews() {
-        imgEmployee=findViewById(R.id.imgEmployee);
-        txtEmployee=findViewById(R.id.txtEmployee);
-
+        imgEmployee = findViewById(R.id.imgEmployee);
+        txtEmployee = findViewById(R.id.txtEmployee);
     }
-    private void openEmployeeManagementActivity()
-    {
+
+    private void openEmployeeManagementActivity() {
         Intent intent = new Intent(MainActivity.this, EmployeeManagementActivity.class);
         startActivity(intent);
     }
-
 }

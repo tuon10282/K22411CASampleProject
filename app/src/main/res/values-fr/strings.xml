@@ -9,4 +9,7 @@
     <string name="title_result">Résultat : </string>
     <string name="title_infinity">Infini !</string>
     <string name="title_nosulution">Aucune solution !</string>
+    <string name="title_healthcare">Healthcare</string>
+    <string name="title_salary" />
+    <string name="title_em_salary">Salary</string>
 </resources>

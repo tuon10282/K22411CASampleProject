@@ -1,30 +1,29 @@
 <resources>
-<<<<<<< HEAD
     <string name="app_name">K22411CASampleProject</string>
     <string name="title_login_username">User name:</string>
     <string name="title_login_username_hint">Enter your user name</string>
     <string name="title_login_password">Password:</string>
-    <string name="title_password_hint">Enter password\n</string>
+    <string name="title_password_hint">Enter password</string>
     <string name="title_login_save_info">Save Login Info</string>
     <string name="title_login_button" />
     <string name="title_login_btn">Login</string>
     <string name="title_confirm_exit_title">Confirm Exit</string>
     <string name="title_confirm_exit_message">Are you sure you want to exit</string>
     <string name="title_confirm_exit_OK">OK</string>
-    <string name="title_confirm_exit_cancle">CANCLE</string>
+    <string name="title_confirm_exit_cancle">CANCEL</string>
     <string name="title_main_employees">Employee</string>
     <string name="title_main_customer">Customer</string>
 
-=======
-    <string name="app_name">First - Degree</string>
-    <string name="title_app">First Degree</string>
-    <string name="title_a">"Coefficient a: "</string>
-    <string name="title_b">Coefficient b:</string>
-    <string name="title_solution">Solution</string>
-    <string name="title_next">Next</string>
-    <string name="title_exit">Exit</string>
-    <string name="title_result">"Result: "</string>
-    <string name="title_infinity">Infinity!</string>
-    <string name="title_nosulution">No solution!</string>
->>>>>>> 297ea59a764d2d444ef8639419c454ecb9d8efea
+    <!-- Optional from the other branch that may still be useful -->
+    <string name="title_healthcare">Healthcare</string>
+    <string name="title_salary" />
+    <string name="title_salary_employee" />
+    <string name="title_em_salary">Salary</string>
+    <string name="title_employee_healthcare">Employee Healthcare</string>
+    <string name="title_height">Height:</string>
+    <string name="title_weight">Weight:</string>
+    <string name="title_calculate">Calculate</string>
+    <string name="title_clear">Clear</string>
+    <string name="title_close" />
+    <string name="title_exit_close">Close</string>
 </resources>
