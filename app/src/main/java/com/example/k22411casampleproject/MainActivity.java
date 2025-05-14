@@ -16,6 +16,15 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
     ImageView imgEmployee;
     TextView txtEmployee;
+    ImageView imgCustomer;
+    TextView txtCustomer;
+    ImageView imgCategory;
+    TextView txtCategory;
+    ImageView imgProduct;
+    TextView txtProduct;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,25 +39,79 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
-
     private void addEvents() {
-        // Only one listener needed for imgEmployee and txtEmployee
-        View.OnClickListener employeeClickListener = v -> {
-            Toast.makeText(MainActivity.this, "Đã bấm ảnh", Toast.LENGTH_SHORT).show();
+        // Employee
+        imgEmployee.setOnClickListener(v -> {
+            Toast.makeText(MainActivity.this, "Đã bấm ảnh nhân viên", Toast.LENGTH_SHORT).show();
             openEmployeeManagementActivity();
-        };
+        });
 
-        imgEmployee.setOnClickListener(employeeClickListener);
-        txtEmployee.setOnClickListener(employeeClickListener);
+        txtEmployee.setOnClickListener(v -> {
+            openEmployeeManagementActivity();
+        });
+
+        // Customer
+        imgCustomer.setOnClickListener(v -> {
+            Toast.makeText(MainActivity.this, "Đã bấm ảnh khách hàng", Toast.LENGTH_SHORT).show();
+            openCustomerManagementActivity();
+        });
+
+        txtCustomer.setOnClickListener(v -> {
+            openCustomerManagementActivity();
+        });
+        // Customer
+        imgCategory.setOnClickListener(v -> {
+            Toast.makeText(MainActivity.this, "Đã bấm ảnh khách hàng", Toast.LENGTH_SHORT).show();
+            openCategoryManagementActivity();
+        });
+
+        txtCategory.setOnClickListener(v -> {
+            openCategoryManagementActivity();
+        });
+        // Customer
+        imgProduct.setOnClickListener(v -> {
+            Toast.makeText(MainActivity.this, "Đã bấm ảnh khách hàng", Toast.LENGTH_SHORT).show();
+            openProductManagementActivity();
+        });
+
+        txtProduct.setOnClickListener(v -> {
+            openProductManagementActivity();;
+        });
+
     }
 
     private void addViews() {
-        imgEmployee = findViewById(R.id.imgEmployee);
-        txtEmployee = findViewById(R.id.txtEmployee);
-    }
+        imgEmployee=findViewById(R.id.imgEmployee);
+        txtEmployee=findViewById(R.id.txtEmployee);
+        imgCustomer=findViewById(R.id.imgCustomer);
+        txtCustomer=findViewById(R.id.txtCustomer);
+        imgCategory=findViewById(R.id.imgCategory);
+        txtCategory=findViewById(R.id.txtCategory);
+        imgProduct=findViewById(R.id.imgProduct);
+        txtProduct=findViewById(R.id.txtProduct);
 
-    private void openEmployeeManagementActivity() {
+    }
+    private void openEmployeeManagementActivity()
+    {
         Intent intent = new Intent(MainActivity.this, EmployeeManagementActivity.class);
         startActivity(intent);
     }
+    private void openCustomerManagementActivity()
+    {
+        Intent intent = new Intent(MainActivity.this, CustomerManagementActivity.class);
+        startActivity(intent);
+    }
+    private void openCategoryManagementActivity()
+    {
+        Intent intent = new Intent(MainActivity.this, CategoryManagementActivity.class);
+        startActivity(intent);
+    }
+    private void openProductManagementActivity()
+    {
+        Intent intent = new Intent(MainActivity.this, ProductManagementActivity.class);
+        startActivity(intent);
+    }
+
+
+
 }

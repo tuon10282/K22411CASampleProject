@@ -1,15 +1,29 @@
 <resources>
-    <string name="app_name">Bậc Nhất</string>
-    <string name="title_app">Phương trình Bậc Nhất</string>
-    <string name="title_a">Hệ số a: </string>
-    <string name="title_b">Hệ số b:</string>
-    <string name="title_solution">Giải phương trình</string>
-    <string name="title_next">Tiếp tục</string>
-    <string name="title_exit">Thoát</string>
-    <string name="title_result">Kết quả: </string>
-    <string name="title_infinity">Vô số nghiệm!</string>
-    <string name="title_nosulution">Vô nghiệm!</string>
+    <string name="app_name">K22411CASampleProject</string>
+    <string name="title_login_username">User name:</string>
+    <string name="title_login_username_hint">Enter your user name</string>
+    <string name="title_login_password">Password:</string>
+    <string name="title_password_hint">Enter password</string>
+    <string name="title_login_save_info">Save Login Info</string>
+    <string name="title_login_button" />
+    <string name="title_login_btn">Login</string>
+    <string name="title_confirm_exit_title">Confirm Exit</string>
+    <string name="title_confirm_exit_message">Are you sure you want to exit</string>
+    <string name="title_confirm_exit_OK">OK</string>
+    <string name="title_confirm_exit_cancle">CANCEL</string>
+    <string name="title_main_employees">Employee</string>
+    <string name="title_main_customer">Customer</string>
+
+    <!-- Optional from the other branch that may still be useful -->
     <string name="title_healthcare">Healthcare</string>
     <string name="title_salary" />
+    <string name="title_salary_employee" />
     <string name="title_em_salary">Salary</string>
+    <string name="title_employee_healthcare">Employee Healthcare</string>
+    <string name="title_height">Height:</string>
+    <string name="title_weight">Weight:</string>
+    <string name="title_calculate">Calculate</string>
+    <string name="title_clear">Clear</string>
+    <string name="title_close" />
+    <string name="title_exit_close">Close</string>
 </resources>

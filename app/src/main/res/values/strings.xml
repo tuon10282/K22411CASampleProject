@@ -26,4 +26,7 @@
     <string name="title_clear">Clear</string>
     <string name="title_close" />
     <string name="title_exit_close">Close</string>
+    <string name="title_Category">Category</string>
+    <string name="titleProduct">Product</string>
+    <string name="titleCategory">Category</string>
 </resources>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -11,28 +12,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.K22411CASampleProject"
         tools:targetApi="31">
-
-        <!-- Các activities khác -->
         <activity
-            android:name=".EmployeeHealthcareActivity"
+            android:name=".ProductManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CategoryManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerManagementActivity"
             android:exported="false" />
         <activity
             android:name=".EmployeeManagementActivity"
             android:exported="true" />
         <activity
             android:name=".LoginActivity"
-            android:exported="true" />
-
-        <!-- Đây là phần quan trọng để khai báo MainActivity là activity khởi chạy -->
-        <activity
-            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".EmployeeHealthcareActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
