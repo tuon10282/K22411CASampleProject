@@ -22,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
     TextView txtCategory;
     ImageView imgProduct;
     TextView txtProduct;
+    ImageView imgAdvancedProduct;
+    TextView txtAdvancedProduct;
+
 
 
 
@@ -77,6 +80,16 @@ public class MainActivity extends AppCompatActivity {
         txtProduct.setOnClickListener(v -> {
             openProductManagementActivity();;
         });
+        // Advanced Product
+        imgAdvancedProduct.setOnClickListener(v -> {
+            Toast.makeText(MainActivity.this, "Đã bấm ảnh khách hàng", Toast.LENGTH_SHORT).show();
+            openAdvancedProductManagementActivity();
+        });
+
+        txtAdvancedProduct.setOnClickListener(v -> {
+            openAdvancedProductManagementActivity();;
+        });
+
 
     }
 
@@ -89,7 +102,8 @@ public class MainActivity extends AppCompatActivity {
         txtCategory=findViewById(R.id.txtCategory);
         imgProduct=findViewById(R.id.imgProduct);
         txtProduct=findViewById(R.id.txtProduct);
-
+        imgAdvancedProduct=findViewById(R.id.imgAdvancedProduct);
+        txtAdvancedProduct=findViewById(R.id.txtAdvancedProduct);
     }
     private void openEmployeeManagementActivity()
     {
@@ -111,6 +125,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, ProductManagementActivity.class);
         startActivity(intent);
     }
+    private void openAdvancedProductManagementActivity()
+    {
+        Intent intent = new Intent(MainActivity.this, ProductManagementActivity2.class);
+        startActivity(intent);
+    }
+
 
 
 
