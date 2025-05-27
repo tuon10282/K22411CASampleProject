@@ -1,6 +1,8 @@
 package com.example.k22411casampleproject;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.content.Intent;
 
@@ -20,6 +22,12 @@ public class CustomerDetailActivity extends AppCompatActivity {
     EditText edt_customer_phone;
     EditText edt_customer_username;
     EditText edt_password;
+
+    Button btnNew;
+    Button btnSave;
+    Button btnRemove;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +39,51 @@ public class CustomerDetailActivity extends AppCompatActivity {
             return insets;
         });
         addViews();
+        addEvents();
+    }
+
+    private void addEvents() {
+        btnNew.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                do_new();
+            }
+        });
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                do_save();
+            }
+        });
+        btnRemove.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                do_remove();
+            }
+        });
+
+    }
+
+    private void do_remove() {
+    }
+
+    private void do_new() {
+    }
+
+    private void do_save() {
+        Customer c=new Customer();
+        c.setId(Integer.parseInt(edt_customer_id.getText().toString()));
+        c.setName(edt_customer_name.getText().toString());
+        c.setEmail(edt_customer_email.getText().toString());
+        c.setPhone(edt_customer_phone.getText().toString());
+        c.setUsername(edt_customer_username.getText().toString());
+        c.setPassword(edt_password.getText().toString());
+        Intent intent=getIntent();
+        intent.putExtra("NEW_CUSTOMER",c);
+        //đóng dấu gửi dữ liệu về
+        setResult(1000,intent);
+        //sau đó phải đóng màn hình này
+        finish();
     }
 
     private void addViews() {
@@ -42,11 +95,18 @@ public class CustomerDetailActivity extends AppCompatActivity {
          edt_password=findViewById(R.id.edt_password);
          display_customer_details();
 
+        btnNew=findViewById(R.id.btnNew);
+        btnSave=findViewById(R.id.btnSave);
+        btnRemove=findViewById(R.id.btnRemove);
+
+
     }
 
     private void display_customer_details() {
         Intent intent=getIntent();
         Customer c=(Customer) intent.getSerializableExtra("SELECTED_CUSTOMER");
+        if (c==null)
+            return;
          edt_customer_id.setText(c.getId() + "");
          edt_customer_name.setText(c.getName() + "");
          edt_customer_email.setText(c.getEmail() + "");

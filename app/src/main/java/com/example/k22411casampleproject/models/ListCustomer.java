@@ -33,5 +33,18 @@ public class ListCustomer {
         addCustomer(new Customer(9, "Kioe", "kioe@gmail.com", "0123456789", "kioe", "123"));
         addCustomer(new Customer(10, "Kak", "kak@gmail.com", "0123456789", "kak", "123"));
     }
+    public boolean isExisting(Customer c)
+    {
+        for(Customer cus: customers)
+        {
+            if(cus.getId()== c.getId() ||
+            cus.getPhone().equals(c.getPhone()) ||
+            cus.getEmail().equalsIgnoreCase(c.getEmail()) ||
+            cus.getUsername().equalsIgnoreCase(c.getUsername())
+            )
+            return true;
+        }
+        return false;
+    }
 }
 

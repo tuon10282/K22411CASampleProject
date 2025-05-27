@@ -21,6 +21,8 @@ import androidx.core.view.WindowInsetsCompat;
 import com.example.k22411casampleproject.models.Customer;
 import com.example.k22411casampleproject.models.ListCustomer;
 
+import org.jetbrains.annotations.Nullable;
+
 
 public class CustomerManagementActivity extends AppCompatActivity {
     ListView lvCustomer;
@@ -31,6 +33,10 @@ public class CustomerManagementActivity extends AppCompatActivity {
 
     MenuItem menu_broadcast;
     MenuItem menu_help;
+
+    final int ID_CREATE_NEW_CUSTOMER=1;
+    final int ID_UPDATE_CUSTOMER=2;
+
 
 
 
@@ -108,6 +114,30 @@ public class CustomerManagementActivity extends AppCompatActivity {
     }
 
     private void openNewCustomerActivity() {
-        //hôm sau làm (26/05)
+        Intent intent = new Intent(CustomerManagementActivity.this, CustomerDetailActivity.class);
+//        startActivity(intent);
+        startActivityForResult(intent,ID_CREATE_NEW_CUSTOMER);
     }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode,resultCode, data );
+        if(requestCode==ID_CREATE_NEW_CUSTOMER && resultCode==1000)
+        {
+            Customer c= (Customer) data.getSerializableExtra("NEW_CUSTOMER");
+            // CÓ HAI TÌNH HUỐNG
+            // lưu mới hay lưu cập nhật
+            process_save_customer(c);
+        }
+    }
+
+    private void process_save_customer(Customer c) {
+        boolean result=lc.isExisting(c);
+        if(result==true) // tức đã tồn tại
+            return; // không thêm mới
+        //còn nếu ta muốn cập nhật thì viết code cập nhật
+        lc.addCustomer(c);
+        adapter.clear();
+        adapter.addAll(lc.getCustomers());
+    }
+
 }

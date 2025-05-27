@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void openAdvancedProductManagementActivity()
     {
-        Intent intent = new Intent(MainActivity.this, ProductManagementActivity2.class);
+        Intent intent = new Intent(MainActivity.this, AdvancedProductManagementActivity.class);
         startActivity(intent);
     }
 

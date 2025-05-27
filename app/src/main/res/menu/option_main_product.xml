@@ -11,4 +11,45 @@
     <item
         android:id="@+id/menu_inventory"
         android:title="@string/title_inventory" />
+    <item
+        android:id="@+id/menu_orders"
+        android:title="Orders" />
+    <item
+        android:id="@+id/menu_customers"
+        android:title="Customers" />
+    <item
+        android:id="@+id/menu_reports"
+        android:title="Reports" />
+    <item
+        android:id="@+id/menu_settings"
+        android:title="Settings" />
+    <item
+        android:id="@+id/menu_about"
+        android:title="About" />
+    <item
+        android:id="@+id/menu_help"
+        android:title="Help" />
+    <item
+        android:id="@+id/menu_feedback"
+        android:title="Feedback" />
+    <item
+        android:id="@+id/menu_terms"
+        android:title="Terms of Service" />
+    <item
+        android:id="@+id/menu_privacy"
+        android:title="Privacy Policy" />
+    <item
+        android:id="@+id/menu_logout"
+        android:title="Logout" />
+    <item android:id="@+id/menu_extra_1" android:title="Extra Item 1" />
+    <item android:id="@+id/menu_extra_2" android:title="Extra Item 2" />
+    <item android:id="@+id/menu_extra_3" android:title="Extra Item 3" />
+    <item android:id="@+id/menu_extra_4" android:title="Extra Item 4" />
+    <item android:id="@+id/menu_extra_5" android:title="Extra Item 5" />
+    <item android:id="@+id/menu_extra_6" android:title="Extra Item 6" />
+    <item android:id="@+id/menu_extra_7" android:title="Extra Item 7" />
+    <item android:id="@+id/menu_extra_8" android:title="Extra Item 8" />
+    <item android:id="@+id/menu_extra_9" android:title="Extra Item 9" />
+    <item android:id="@+id/menu_extra_10" android:title="Extra Item 10" />
+
 </menu>
