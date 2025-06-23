@@ -2,141 +2,249 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/main"
+    android:id="@+id/btnDraw"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TableLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp">
+        android:layout_height="match_parent">
 
-        <!-- First Row -->
-        <TableRow
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
 
-                <ImageView
-                    android:id="@+id/imgEmployee"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    app:srcCompat="@mipmap/ic_employee" />
-
-                <TextView
-                    android:id="@+id/txtEmployee"
+                <!-- First Row -->
+                <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/title_main_employees"
-                    android:textAlignment="center"
-                    android:textColor="#FF0B0B" />
-            </LinearLayout>
+                    android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/imgCustomer"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    app:srcCompat="@mipmap/ic_customer" />
+                        <ImageView
+                            android:id="@+id/imgEmployee"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            app:srcCompat="@mipmap/ic_employee" />
 
-                <TextView
-                    android:id="@+id/txtCustomer"
+                        <TextView
+                            android:id="@+id/txtEmployee"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_main_employees"
+                            android:textAlignment="center"
+                            android:textColor="#FF0B0B" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imgCustomer"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            app:srcCompat="@mipmap/ic_customer" />
+
+                        <TextView
+                            android:id="@+id/txtCustomer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_main_customer"
+                            android:textAlignment="center"
+                            android:textColor="#FF0B0B" />
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/title_main_customer"
-                    android:textAlignment="center"
-                    android:textColor="#FF0B0B" />
-            </LinearLayout>
+                    android:layout_height="wrap_content">
 
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center">
+                        <ImageView
+                            android:id="@+id/imgCategory"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            app:srcCompat="@mipmap/ic_category" />
 
-                <ImageView
-                    android:id="@+id/imgCategory"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    app:srcCompat="@mipmap/ic_category" />
+                        <TextView
+                            android:id="@+id/txtCategory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/titleCategory"
+                            android:textAlignment="center"
+                            android:textColor="#FF0B0B" />
+                    </LinearLayout>
 
-                <TextView
-                    android:id="@+id/txtCategory"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/titleCategory"
-                    android:textAlignment="center"
-                    android:textColor="#FF0B0B" />
-            </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center">
+                        <ImageView
+                            android:id="@+id/imgProduct"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            app:srcCompat="@mipmap/ic_product" />
 
-                <ImageView
-                    android:id="@+id/imgProduct"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    app:srcCompat="@mipmap/ic_product" />
+                        <TextView
+                            android:id="@+id/txtProduct"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/titleProduct"
+                            android:textAlignment="center"
+                            android:textColor="#FF0B0B" />
+                    </LinearLayout>
 
-                <TextView
-                    android:id="@+id/txtProduct"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/titleProduct"
-                    android:textAlignment="center"
-                    android:textColor="#FF0B0B" />
-            </LinearLayout>
+                </TableRow>
 
-        </TableRow>
-        <TableRow>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center">
+                <TableRow>
 
-                <ImageView
-                    android:id="@+id/imgAdvancedProduct"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    app:srcCompat="@mipmap/ic_logo" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/txtAdvancedProduct"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/titleAdvancedProduct"
-                    android:textAlignment="center"
-                    android:textColor="#FF0B0B" />
-            </LinearLayout>
+                        <ImageView
+                            android:id="@+id/imgAdvancedProduct"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            app:srcCompat="@mipmap/ic_logo" />
 
-        </TableRow>
+                        <TextView
+                            android:id="@+id/txtAdvancedProduct"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/titleAdvancedProduct"
+                            android:textAlignment="center"
+                            android:textColor="#FF0B0B" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imgPaymentMethod"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            app:srcCompat="@mipmap/ic_paymentmethod" />
+
+                        <TextView
+                            android:id="@+id/txtPaymentMethod"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_payment_method"
+                            android:textAlignment="center"
+                            android:textColor="#FF0B0B" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imgOrders"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            app:srcCompat="@mipmap/ic_cart" />
+
+                        <TextView
+                            android:id="@+id/txtOrders"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_orders"
+                            android:textAlignment="center"
+                            android:textColor="#FF0B0B" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imgContact"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            app:srcCompat="@mipmap/ic_contact" />
+
+                        <TextView
+                            android:id="@+id/txtContact"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_conntactt"
+                            android:textAlignment="center"
+                            android:textColor="#FF0B0B" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imgMultiThreading"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            app:srcCompat="@mipmap/ic_thread" />
+
+                        <TextView
+                            android:id="@+id/txtMultiThreading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_multi_threading"
+                            android:textAlignment="center"
+                            android:textColor="#FF0B0B" />
+                    </LinearLayout>
+                </TableRow>
 
 
-    </TableLayout>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

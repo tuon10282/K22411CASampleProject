@@ -2,7 +2,6 @@ package com.example.k22411casampleproject;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,6 +23,17 @@ public class MainActivity extends AppCompatActivity {
     TextView txtProduct;
     ImageView imgAdvancedProduct;
     TextView txtAdvancedProduct;
+    TextView txtPaymentMethod;
+    ImageView imgPaymentMethod;
+
+    TextView txtOrders;
+    ImageView imgOrders;
+    TextView txtContact;
+    ImageView imgContact;
+    TextView txtMultiThreading;
+    ImageView imgMultiThreading;
+
+
 
 
 
@@ -36,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         addViews();
         addEvents();
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.btnDraw), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
@@ -89,9 +99,47 @@ public class MainActivity extends AppCompatActivity {
         txtAdvancedProduct.setOnClickListener(v -> {
             openAdvancedProductManagementActivity();;
         });
+        //Payment Method
+        imgPaymentMethod.setOnClickListener(v -> {
+            Toast.makeText(MainActivity.this, "Đã bấm ảnh khách hàng", Toast.LENGTH_SHORT).show();
+            openPaymentMethod();
+        });
+
+        txtPaymentMethod.setOnClickListener(v -> {
+            openPaymentMethod();
+        });
+        //Payment Method
+        imgOrders.setOnClickListener(v -> {
+            Toast.makeText(MainActivity.this, "Đã bấm ảnh khách hàng", Toast.LENGTH_SHORT).show();
+            openOrderViewerActivity();
+        });
+
+        txtOrders.setOnClickListener(v -> {
+            openOrderViewerActivity();
+        });
+        imgContact.setOnClickListener(v -> {
+            Toast.makeText(MainActivity.this, "Đã bấm ảnh khách hàng", Toast.LENGTH_SHORT).show();
+            openContactActivity();
+        });
+
+        txtContact.setOnClickListener(v -> {
+            openContactActivity();
+        });
+        imgMultiThreading.setOnClickListener(v -> {
+            Toast.makeText(MainActivity.this, "Đã bấm ảnh khách hàng", Toast.LENGTH_SHORT).show();
+            openMultiThreadingActivity();
+        });
+
+        txtMultiThreading.setOnClickListener(v -> {
+            openMultiThreadingActivity();
+        });
+
+
 
 
     }
+
+
 
     private void addViews() {
         imgEmployee=findViewById(R.id.imgEmployee);
@@ -104,6 +152,16 @@ public class MainActivity extends AppCompatActivity {
         txtProduct=findViewById(R.id.txtProduct);
         imgAdvancedProduct=findViewById(R.id.imgAdvancedProduct);
         txtAdvancedProduct=findViewById(R.id.txtAdvancedProduct);
+        imgPaymentMethod=findViewById(R.id.imgPaymentMethod);
+        txtPaymentMethod=findViewById(R.id.txtPaymentMethod);
+        imgOrders=findViewById(R.id.imgOrders);
+        txtOrders=findViewById(R.id.txtOrders);
+        txtContact=findViewById(R.id.txtContact);
+        imgContact=findViewById(R.id.imgContact);
+        txtMultiThreading=findViewById(R.id.txtMultiThreading);
+        imgMultiThreading=findViewById(R.id.imgMultiThreading);
+
+
     }
     private void openEmployeeManagementActivity()
     {
@@ -130,6 +188,32 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, AdvancedProductManagementActivity.class);
         startActivity(intent);
     }
+
+    private void openPaymentMethod() {
+        Intent intent = new Intent(MainActivity.this, PaymentMethodActivity.class);
+        startActivity(intent);
+
+    }
+    private void openOrderViewerActivity() {
+        Intent intent = new Intent(MainActivity.this, OrdersViewerActivity.
+                class);
+        startActivity(intent);
+
+    }
+    private void openContactActivity() {
+        Intent intent = new Intent(MainActivity.this, TelephonyActivity.
+                class);
+        startActivity(intent);
+
+    }
+    private void openMultiThreadingActivity() {
+        Intent intent = new Intent(MainActivity.this, MultiThreadingCategoriesActivity.
+                class);
+        startActivity(intent);
+
+    }
+
+
 
 
 

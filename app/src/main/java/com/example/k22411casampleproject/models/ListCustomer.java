@@ -1,9 +1,14 @@
 package com.example.k22411casampleproject.models;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+
 import java.util.ArrayList;
 
 public class ListCustomer {
     private ArrayList<Customer> customers;
+    SQLiteDatabase database=null;
+
 
     public ListCustomer() {
         customers=new ArrayList<>();
@@ -46,5 +51,30 @@ public class ListCustomer {
         }
         return false;
     }
+    public void getAllCustomers(SQLiteDatabase database)
+    {
+        Cursor cursor = database.rawQuery("SELECT * FROM Customers",
+                null);
+        customers.clear();
+        while(cursor.moveToNext()){
+            int id = cursor.getInt(0);
+            String name = cursor.getString(1);
+            String phone = cursor.getString(2);
+            String email = cursor.getString(3);
+            String username = cursor.getString(4);
+            String password = cursor.getString(5);
+            int saveInfor=cursor.getInt(6);
+            Customer c=new Customer();
+            c.setId(id);
+            c.setName(name);
+            c.setPhone(phone);
+            c.setEmail(email);
+            c.setUsername(username);
+            c.setPassword(password);
+            customers.add(c);
+        }
+        cursor.close();
+    }
+
 }
 

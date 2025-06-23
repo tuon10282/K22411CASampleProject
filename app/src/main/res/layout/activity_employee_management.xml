@@ -7,7 +7,7 @@
     android:background="#F8F8F8">
 
     <LinearLayout
-        android:id="@+id/main"
+        android:id="@+id/btnDraw"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"

@@ -51,4 +51,18 @@
     <string name="title_product_price">Price:</string>
     <string name="title_product_categoryid">CategoryID:</string>
     <string name="title_imageid">Image Id:</string>
+    <string name="title_payment_method">Payment Method\n</string>
+    <string name="title_orders">Orders</string>
+    <string name="title_contact" />
+    <string name="title_conntactt">Contact</string>
+    <string name="title_phone">Phone</string>
+    <string name="title_body_sms">Body</string>
+    <string name="title_multi">Multi Threading\n</string>
+    <string name="title_multi_threading">Multi Threading</string>
+    <string name="title_handler_send_message">Handler Send Messgae</string>
+    <string name="titlte_handler_post_message">Hander Post Message</string>
+    <string name="title_async_task">ASync Task</string>
+    <string name="title_draw">Draw</string>
+    <string name="title_numberofcontact">Number Of Contact</string>
+    <string name="title_create_contact">Create Contact</string>
 </resources>
